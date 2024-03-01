@@ -1,16 +1,16 @@
 import PropTypes from "prop-types";
-import styles from "./styles/SearchBox.module.css";
+import "./styles/SearchBox.css";
 
 const SearchBox = ({ value, onChange }) => {
   return (
-    <div className={styles.searchContainer}>
+    <div className="searchContainer">
       <h3>Find contacts by name</h3>
       <input
         type="text"
         placeholder="Search Contacts"
         value={value}
         onChange={onChange}
-        className={styles.input}
+        className="input"
       />
     </div>
   );

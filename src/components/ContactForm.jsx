@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import PropTypes from "prop-types";
-import styles from "./styles/ContactForm.module.css";
+import "./styles/ContactForm.css";
 
 const ContactForm = ({ onSubmit }) => {
   const initialValues = { name: "", number: "" };
@@ -14,15 +14,15 @@ const ContactForm = ({ onSubmit }) => {
   });
 
   return (
-    <div className={styles.formContainer}>
+    <div className="formContainer">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={onSubmit}
       >
-        <Form className={styles.form}>
-          <div className={styles.fieldGroup}>
-            <label htmlFor="name" className={styles.label}>
+        <Form className="form">
+          <div className="fieldGroup">
+            <label htmlFor="name" className="label">
               Name:
             </label>
             <Field
@@ -30,16 +30,12 @@ const ContactForm = ({ onSubmit }) => {
               id="name"
               name="name"
               placeholder="Enter your name"
-              className={styles.input}
+              className="input-form"
             />
-            <ErrorMessage
-              name="name"
-              component="div"
-              className={styles.error}
-            />
+            <ErrorMessage name="name" component="div" className="error" />
           </div>
-          <div className={styles.fieldGroup}>
-            <label htmlFor="number" className={styles.label}>
+          <div className="fieldGroup">
+            <label htmlFor="number" className="label">
               Number:
             </label>
             <Field
@@ -47,15 +43,11 @@ const ContactForm = ({ onSubmit }) => {
               id="number"
               name="number"
               placeholder="Enter your phone number"
-              className={styles.input}
+              className="input-form"
             />
-            <ErrorMessage
-              name="number"
-              component="div"
-              className={styles.error}
-            />
+            <ErrorMessage name="number" component="div" className="error" />
           </div>
-          <button type="submit" className={styles.button}>
+          <button type="submit" className="button-form">
             Add Contact
           </button>
         </Form>

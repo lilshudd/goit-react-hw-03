@@ -3,10 +3,12 @@
   flex-direction: column;
   align-items: flex-start;
   border: 1px solid;
-  width: 300px;
+  border-radius: 4px;
   box-sizing: content-box;
+  width: 300px;
   padding: 20px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
 .fieldGroup {
@@ -24,10 +26,11 @@
   margin-bottom: 5px;
 }
 
-.input {
+.input-form {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: content-box;
 }
 
 .error {
@@ -35,7 +38,7 @@
   margin-top: 5px;
 }
 
-.button {
+.button-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +49,7 @@
   margin: auto;
 }
 
-.button:hover {
+.button-form:hover {
   background-color: rgb(231, 231, 231);
   border: 1px solid black;
 }
